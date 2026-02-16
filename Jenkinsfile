@@ -20,11 +20,15 @@ pipeline {
     post {
 
         success {
-            emailNotification.successEmail()
+            script {
+                emailNotification.successEmail()
+            }
         }
 
         failure {
-            emailNotification.failureEmail()
+            script {
+                emailNotification.failureEmail()
+            }
         }
 
     }
